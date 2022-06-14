@@ -1,0 +1,16 @@
+version: '3'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["./manage.py", "runserver", "0.0.0.0:8000"]
+    # command: ["gunicorn", "-k", "gthread", "--threads", "8", "--bind", "0.0.0.0:8000", "rasters.wsgi"]
+    # Log printing via Rich is enhanced by a TTY
+    tty: false
+    volumes:
+      - .:/opt/django-project
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres

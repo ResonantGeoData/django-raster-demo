@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgis/postgis:latest
+    environment:
+      POSTGRES_DB: django
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - ${DOCKER_POSTGRES_PORT-5432}:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+
+volumes:
+  dbdata:
