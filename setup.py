@@ -43,7 +43,7 @@ setup(
         'django_extensions',
         'drf-yasg',
         'large-image[gdal]>=1.14',
-        'django-large-image>=0.4.0',
+        'django-large-image>=0.7.0',
         'django-raster',
         'psycopg2',
         'whitenoise',

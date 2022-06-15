@@ -2,6 +2,8 @@
 
 Demonstrating how to use `django-large-image` with `django-raster`
 
+![demo](./demo.png)
+
 
 ## Custom ViewSet
 
